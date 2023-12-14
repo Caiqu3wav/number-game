@@ -77,13 +77,13 @@ function checkNumber(clickedNumber, clickedWord, card) {
 }
 
 function addEmojiRain() {
-    const numberOfEmojis = 5; // Altere conforme necessário
+    const numberOfEmojis = 5;
     const emojiContainer = document.createElement('div');
     emojiContainer.classList.add('emoji-rain');
 
     for (let i = 0; i < numberOfEmojis; i++) {
         const emoji = document.createElement('div');
-        emoji.textContent = '🎉'; // Altere para o emoji desejado ou carregue de um arquivo
+        emoji.textContent = '🎉';
         emoji.style.left = `${Math.random() * window.innerWidth}px`;
         emoji.style.animationDuration = `${Math.random() * 2 + 1}s`;
         emoji.style.animationDelay = `${Math.random()}s`;
@@ -100,8 +100,10 @@ function addEmojiRain() {
 }
 
 function playCelebrationMusic() {
-    // Adicione aqui a lógica para reproduzir a música de celebração
-    // Certifique-se de lidar com a reprodução automática dependendo das políticas do navegador
     const audio = new Audio('assets\music\Y2meta.app - Queen - We are the champions (Chorus only) (256 kbps).mp3');
     audio.play();
+}
+
+function resetPage(){
+    location.reload();
 }
