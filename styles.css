@@ -1,3 +1,5 @@
+  @import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -7,6 +9,15 @@
 body{
     height: 100vh;
     overflow: hidden; /* Para evitar barras de rolagem durante a chuva de emojis */
+}
+
+.game-title{
+    position: absolute;
+    margin-top: 40px;
+    text-align: center;
+    top: -20px;
+    color: #27ae60;
+    font-family: 'Rubik Bubbles', sans-serif;
 }
 
 .all-container{
@@ -60,8 +71,10 @@ main{
 }
 
 #instruction-container {
+    display: flex;
     text-align: center;
     margin-bottom: 20px;
+    align-items: center;
 }
 
 #result-message {
@@ -108,4 +121,71 @@ main{
 
 #reset-page-btn button img{
 width: 32px;
+}
+
+@media screen and (max-width: 810px) {
+    .number-card{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+#instruction-container h2{
+    font-size: 18px;
+}
+}
+
+@media screen and (max-width: 656px) {
+.all-container{
+    height: 70%;
+}
+
+.number-card{
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+}
+}
+
+@media screen and (max-width: 642px) {
+    #number-instruction{
+        width: 80%;
+        text-align: center;
+        margin-left: 10%;
+    }
+}
+
+@media screen and (max-width: 637px) {
+#reset-page-btn button{
+    width: 15rem;
+}
+
+#result-message, #instruction-container h2{
+    font-size: 1rem;
+}
+
+}
+
+@media screen and (max-width: 501px) {
+.all-container{
+    width: 70%;
+    height: 60%;
+}
+
+#instruction-container h2{
+    font-size: 1.5rem;
+}
+
+}
+
+@media screen and (max-width: 360px) {
+
+    #reset-page-btn button{
+        width: 11rem;
+    }
+
+    .all-container{
+        width: 89%;
+    }
 }
